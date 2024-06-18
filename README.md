@@ -10,7 +10,7 @@
 
 ### Descripción
 
-Este proyecto fue realizado con React JS v18, permite listar productos, filtrar por categorias, acceder a los detalles, tambien cuenta con carrito de compras y generación de ordenes que se suben a una base de datos.
+Este proyecto fue realizado con React JS v18, permite listar productos, filtrar por categorias y  acceder a los detalles.
 
 #### Dependencias
 `react` `firebase` `react-router-dom` `yup` `react-toastify` `react-icons`
