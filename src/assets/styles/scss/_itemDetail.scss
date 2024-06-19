@@ -1,0 +1,39 @@
+.itemDetail{
+    .img-details{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: solid 1px black;
+        transition: all 0.6s ease;
+        &:hover{
+            cursor: pointer;
+            border:solid red 1px;
+            filter: brightness(30%);
+        }
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 150px);
+        grid-template-areas: 
+        "fot1 fot2 fot3"
+        "fot1 fot4 fot5";
+        gap: 2px;
+    }
+    .f-1{
+        grid-area: fot1;
+    }
+    .f-2{
+        grid-area: fot2;
+    }
+    .f-3{
+        grid-area: fot3;
+    }
+    .f-4{
+        grid-area: fot4;
+    }
+    .f-5{
+        grid-area: fot5;
+    }
+
+}

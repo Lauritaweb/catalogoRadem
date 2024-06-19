@@ -42,6 +42,7 @@ $white:white;
     transition: color 0.5s; 
 
     &:before {
+        color:black!important;
         content: "";
         position: absolute;
         top: 0;
@@ -54,11 +55,12 @@ $white:white;
     }
 
     &:hover {
-        color: red!important; 
+        color:black!important; 
         border: solid $mainColor 1px;
 
         &:before {
             left: 0;
+            color:black!important;
         }
     }
 
