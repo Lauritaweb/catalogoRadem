@@ -71,3 +71,37 @@ $white:white;
     }
 }
 
+.btn-call-to-action-2{
+    background-color: $mainColor;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 4px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: none;
+    font-weight: 300;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    transition: color .8s; 
+    &:hover{
+        background-color: white;
+        color: $mainColor;
+        border: solid 1px $mainColor;
+    }
+}
+
+// wa
+.wa{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 500;
+    width: 70px;
+    height: 70px;
+    img{
+        width: 100%;
+    }
+}

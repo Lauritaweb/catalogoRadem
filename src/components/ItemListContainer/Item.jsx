@@ -21,7 +21,7 @@ const Item = ({ product }) => {
         <h2 className="card-title text-uppercase text-black fs-5 fw-light">{product.name}</h2>
         <small className="text-uppercase fw-light">{product.description}</small>
         <div className="mt-3">
-          <Link to={`/detail/${product.id}`} className="btn-call-to-action">
+          <Link to={`/detail/${product.id}`} className="btn-call-to-action-2">
             Ver +
           </Link>
         </div>

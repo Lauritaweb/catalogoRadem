@@ -17,13 +17,13 @@ const NavBar = () => {
             <NavDropdown.Item as={Link} to="/category/cocina" className="fs-6">Cocina</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/category/puertas" className="fs-6">Puertas</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link as={Link} to="#feature-products" className="fs-6">Novedades</Nav.Link>
-          <Nav.Link href="#" className="fs-6">Catálogo</Nav.Link>
-          <Nav.Link href="http://www.radem.com.ar/#about-us" className="fs-6">Nosotros</Nav.Link>
-          <Nav.Link href="#">
+          <Nav.Link as={Link} to="http://www.radem.com.ar/index.html#feature-products" className="fs-6">Novedades</Nav.Link>
+          <Nav.Link href="catalogoRadem.pdf" className="fs-6" target="_blank">Catálogo</Nav.Link>
+          <Nav.Link href="http://www.radem.com.ar/index.html#about-us" className="fs-6">Nosotros</Nav.Link>
+          <Nav.Link href="https://www.instagram.com/radem.ok">
             <img src="http://www.radem.com.ar/catalogo/img/icons/icon-ig-red.svg" alt="Instagram" />
           </Nav.Link>
-          <Nav.Link href="#">
+          <Nav.Link href="https://wa.me/5491150458044">
             <img src="http://www.radem.com.ar/catalogo/img/icons/icon-wa-red.svg" alt="WhatsApp" />
           </Nav.Link>
         </Nav>
