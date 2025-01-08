@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 * {
   font-family: "Lato", sans-serif;
@@ -74,9 +75,59 @@
   transition: color 0.8s;
 }
 .btn-call-to-action-2:hover {
-  background-color: white;
-  color: #ff1500;
-  border: solid 1px #ff1500;
+  background-color: #000000;
+  color: white;
+}
+
+.btn-call-to-action-3 {
+  background-color: transparent; /* Fondo transparente */
+  color: #ff1500; /* Texto rojo */
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 4px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ff1500; /* Borde rojo */
+  border-radius: 4px;
+  font-weight: 300;
+  font-size: 1em;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s, background-color 0.5s; /* Animación para color y fondo */
+}
+.btn-call-to-action-3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #ff1500; /* Fondo rojo para la animación */
+  z-index: 0;
+  transition: left 0.5s;
+}
+.btn-call-to-action-3:hover {
+  color: white; /* Cambia el color del texto a blanco */
+}
+.btn-call-to-action-3:hover:before {
+  left: 0; /* Mueve el fondo hacia la vista */
+}
+.btn-call-to-action-3:hover span {
+  color: inherit; /* Asegura que el texto herede el color del botón */
+}
+.btn-call-to-action-3 span {
+  position: relative;
+  z-index: 1;
+  color: inherit; /* Hereda el color inicial del botón */
+  transition: color 0.5s; /* Suaviza el cambio de color */
+}
+
+.btn-main {
+  background-color: #ff1500;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
 }
 
 .wa {
@@ -89,6 +140,11 @@
 }
 .wa img {
   width: 100%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
 }
 
 .menu {
@@ -124,13 +180,20 @@
   background-image: none !important;
   background-size: auto;
 }
+.menu button.navbar-toggler {
+  background-color: #000000;
+  margin: 8px 0;
+}
 
 .navbar-expand-lg .navbar-nav {
   align-items: center !important;
 }
 
 .card {
-  background: linear-gradient(180deg, #F8F8F6 0%, #d5d5d5 100%);
+  margin-top: 20px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
 }
 .card h2.card-title {
   text-transform: uppercase;
@@ -142,7 +205,8 @@
   width: auto;
 }
 .card img.w-100.card-img-top {
-  height: 345px;
+  height: 210px;
+  width: 90% !important;
   object-fit: cover;
 }
 
@@ -157,51 +221,29 @@
   padding-left: 4px !important;
 }
 .itemDetail .img-details {
-  width: 100%;
-  height: 100%;
+  width: 350px;
+  height: auto;
   object-fit: cover;
-  border: solid 1px black;
   transition: all 0.6s ease;
+  transform: translate(-40px, -100px);
 }
 .itemDetail .img-details:hover {
   cursor: pointer;
   border: solid red 1px;
   filter: brightness(30%);
 }
-.itemDetail .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 150px);
-  grid-template-areas: "fot1 fot2 fot3" "fot1 fot4 fot5";
-  gap: 2px;
-  margin-bottom: 50px;
-}
-@media (width < 768px) {
-  .itemDetail .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 300px);
-    grid-template-areas: "fot1" "fot2" "fot3" "fot4" "fot5";
+@media (width <= 768px) {
+  .itemDetail .img-details {
+    transform: none;
   }
-}
-.itemDetail .f-1 {
-  grid-area: fot1;
-}
-.itemDetail .f-2 {
-  grid-area: fot2;
-}
-.itemDetail .f-3 {
-  grid-area: fot3;
-}
-.itemDetail .f-4 {
-  grid-area: fot4;
-}
-.itemDetail .f-5 {
-  grid-area: fot5;
 }
 
 /* Lightbox Close Button */
 .lightbox {
   position: relative;
+}
+.lightbox img {
+  width: 400px;
 }
 
 .lightbox-close {

@@ -87,12 +87,67 @@ $white:white;
     overflow: hidden;
     transition: color .8s; 
     &:hover{
-        background-color: white;
-        color: $mainColor;
-        border: solid 1px $mainColor;
+        background-color:$black;
+        color: $white;
+    }
+}
+// btn outline
+.btn-call-to-action-3 {
+    background-color: transparent; /* Fondo transparente */
+    color: $mainColor; /* Texto rojo */
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 4px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $mainColor; /* Borde rojo */
+    border-radius: 4px;
+    font-weight: 300;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s, background-color 0.5s; /* Animación para color y fondo */
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: $mainColor; /* Fondo rojo para la animación */
+        z-index: 0;
+        transition: left 0.5s;
+    }
+
+    &:hover {
+        color: $white; /* Cambia el color del texto a blanco */
+
+        &:before {
+            left: 0; /* Mueve el fondo hacia la vista */
+        }
+
+        span {
+            color: inherit; /* Asegura que el texto herede el color del botón */
+        }
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+        color: inherit; /* Hereda el color inicial del botón */
+        transition: color 0.5s; /* Suaviza el cambio de color */
     }
 }
 
+// btn main
+.btn-main{
+    background-color: $mainColor;
+    color: $white;
+    padding: 8px;
+    border-radius: 10px;
+}
 // wa
 .wa{
     position: fixed;
@@ -103,5 +158,12 @@ $white:white;
     height: 70px;
     img{
         width: 100%;
+    }
+}
+// footer
+footer{
+    a{
+        color: white;
+        text-decoration: none;
     }
 }

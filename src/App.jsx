@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
@@ -6,15 +6,15 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from "./context/CartContext";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";
-import "./App.css";
+import Footer from "./components/Footer/Footer";
+import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
 import Banner from "./components/Banner/Banner";
-// los estilos
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/css/main.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <CartProvider>
         <NavBar />
         <Banner />
@@ -26,8 +26,10 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
+        <Footer />
+        <WhatsAppButton />
       </CartProvider>
-    </BrowserRouter>
+    </Router>
   );
 }
 

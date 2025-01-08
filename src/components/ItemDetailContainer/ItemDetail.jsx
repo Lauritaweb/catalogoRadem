@@ -53,7 +53,7 @@ const ItemDetail = ({ product }) => {
       </nav>
       <div className="row pt-4">
         <div className="col-md-5">
-          <h1 className="text-main fs-3 fw-light">{product.name}</h1>
+          <h1 className="text-main fs-4 fw-light text-uppercase">{product.name}</h1>
           <ul>
             <li>
               <span className='text-uppercase fw-bold'>Categoría: </span>
@@ -64,19 +64,22 @@ const ItemDetail = ({ product }) => {
               {product.code}
             </li>
             <li>
-              <span className='text-uppercase fw-bold'>Variantes: </span>
-              {product.variants}
-            </li>
-            <li>
               <span className='text-uppercase fw-bold'>Medidas </span> <span className='fw-bold'>en mm: </span> 
               {product.dimensions}
+            </li>
+            <li>
+              <span className='text-uppercase fw-bold text-lowercase'>Acabado: </span>
+              {product.variants}
             </li>
           </ul>
         </div>
         <div className="col-md-7">
-          <div className="grid">
+          <div>
             {images.map((image, index) => (
-              <div key={index} className={`f-${index + 1}`}>
+              <div 
+                key={index} 
+                className={`f-${index + 1}`} 
+              >
                 <img
                   src={image.src}
                   alt={image.alt}
