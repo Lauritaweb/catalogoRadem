@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="white" variant="dark" className="pt-0 px-3 menu">
+    <Navbar collapseOnSelect expand="lg" bg="white" variant="light" className="pt-0 px-3 menu fadeIn">
       <Navbar.Brand href="http://www.radem.com.ar/">
         <img src="http://www.radem.com.ar/catalogo/img/logo-radem.svg" className="icon-navbar ms-0 ms-lg-4" />
       </Navbar.Brand>

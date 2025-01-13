@@ -147,6 +147,59 @@ footer a {
   text-decoration: none;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s; /* Duración */
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both; /* Estilo al completar */
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s; /* Duración */
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both; /* Estilo al completar */
+  animation-fill-mode: both;
+}
+
 .menu {
   position: fixed;
   top: 0;
@@ -181,7 +234,8 @@ footer a {
   background-size: auto;
 }
 .menu button.navbar-toggler {
-  background-color: #000000;
+  border: solid 1px grey !important;
+  background-color: transparent;
   margin: 8px 0;
 }
 
@@ -225,7 +279,7 @@ footer a {
   height: auto;
   object-fit: cover;
   transition: all 0.6s ease;
-  transform: translate(-40px, -100px);
+  transform: translate(-20px, -100px);
 }
 .itemDetail .img-details:hover {
   cursor: pointer;
@@ -235,6 +289,15 @@ footer a {
 @media (width <= 768px) {
   .itemDetail .img-details {
     transform: none;
+  }
+}
+.itemDetail a.btn.btn-success.d-flex.align-items-center.mt-3.me-2 {
+  width: 70%;
+}
+@media (width <= 768px) {
+  .itemDetail a.btn.btn-success.d-flex.align-items-center.mt-3.me-2 {
+    width: 100%;
+    text-align: center;
   }
 }
 

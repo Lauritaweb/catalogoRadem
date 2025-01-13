@@ -12,6 +12,7 @@ import Banner from "./components/Banner/Banner";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/css/main.css';
 
+
 function App() {
   return (
     <Router>

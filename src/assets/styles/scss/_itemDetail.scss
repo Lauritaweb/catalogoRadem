@@ -6,10 +6,9 @@
     .img-details{
         width: 350px; 
         height: auto; 
-        // clip-path: inset(20% 10% 20% 10%); /* Recorta un 10% desde cada lado */
         object-fit: cover; 
         transition: all 0.6s ease;
-        transform: translate(-40px, -100px);
+        transform: translate(-20px, -100px);
         &:hover{
             cursor: pointer;
             border:solid red 1px;
@@ -17,6 +16,13 @@
         }
         @media (width<=768px){
             transform: none;
+        }
+    }
+    a.btn.btn-success.d-flex.align-items-center.mt-3.me-2{
+        width: 70%;
+        @media (width<=768px){
+           width: 100%;
+           text-align: center;
         }
     }
     // .grid{

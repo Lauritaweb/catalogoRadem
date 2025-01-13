@@ -15,7 +15,7 @@ const Banner = () => {
   }
 
   return (
-    <img className="banner" src={bannerImage} alt={`Banner ${category}`} />
+    <img className="banner fadeInLeft" src={bannerImage} alt={`Banner ${category}`} />
   );
 }
 

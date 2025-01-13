@@ -87,7 +87,7 @@ const ItemListContainer = ({ saludo }) => {
   const subCategories = getSubCategories();
 
   return (
-    <div className="item-list-container mt-3">
+    <div className="item-list-container mt-3 fadeInLeft">
       <h2 className="text-center fs-1 text-uppercase fw-light text-main mb-3">{getCategoryTitle()}</h2>
       {/* Botones de subcategorías para desktop */}
       {subCategories.length > 0 && (
