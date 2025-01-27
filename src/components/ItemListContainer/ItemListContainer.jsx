@@ -72,13 +72,13 @@ const ItemListContainer = ({ saludo }) => {
   const getSubCategories = () => {
     switch (idCategory) {
       case "bano":
-        return ['Jaboneras', 'Porta Cepillos', 'Perchas', 'Porta Rollos', 'Toalleros', 'Organizadores'];
+        return ['Jaboneras', 'Organizadores', 'Perchas', 'Porta Cepillos', 'Porta Rollos', 'Toalleros'];
       case "cocina":
-        return ['Ganchos', 'Estantes', 'Porta Rollos', 'Barral'];
+        return ['Barral', 'Estantes', 'Ganchos', 'Porta Rollos'];
       case "muebles":
-        return ['Manijas', 'Rejillas', 'Patas', 'Mensulas', 'Estantes'];
+        return ['Estantes', 'Manijas', 'Mensulas', 'Patas', 'Rejillas'];
       case "puertas":
-        return ['Manijones', 'Accesorios', 'Manijas', 'Bisagras', 'Buzones', 'Letras/Números'];
+        return ['Accesorios', 'Bisagras', 'Buzones', 'Letras/Números', 'Manijas', 'Manijones', 'Señalética'];
       default:
         return [];
     }
