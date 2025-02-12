@@ -263,6 +263,19 @@ footer a {
   width: 90% !important;
   object-fit: cover;
 }
+@media (width >= 1920px) {
+  .card img.w-100.card-img-top {
+    height: 254px;
+  }
+}
+@media (width <= 575px) {
+  .card img.w-100.card-img-top {
+    height: auto;
+    width: 70% !important;
+    display: block;
+    margin: auto;
+  }
+}
 
 .banner {
   width: 100%;
